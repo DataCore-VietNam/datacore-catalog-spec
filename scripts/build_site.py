@@ -22,11 +22,14 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from html import escape as html_escape
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CATALOG_JSON = REPO_ROOT / "catalog" / "catalog.json"
 SCHEMA_DIR = REPO_ROOT / "schema"
+
+SITE_URL = "https://datacore-vietnam.github.io/datacore-catalog-spec/"
 
 SCHEMA_FILES = {
     "domain": "domain.schema.json",
@@ -67,10 +70,57 @@ def load_schemas():
     return out
 
 
+def _seo_block(catalog: dict) -> str:
+    n_dom = len(catalog.get("domains", {}))
+    n_prod = catalog.get("productsTotal", 0)
+    n_ds = catalog.get("datasetsTotal", 0)
+    desc = (f"Live snapshot of the DataCore data catalog: {n_dom} domains, "
+            f"{n_prod} products, {n_ds} datasets across Vietnam economy, market, "
+            f"organization, media, and location data. Auto-refreshed monthly.")
+    datasets_ld = []
+    for node in catalog.get("domains", {}).values():
+        for p in node.get("products", []):
+            for d in p.get("datasets", []):
+                datasets_ld.append({
+                    "@type": "Dataset",
+                    "name": d.get("name"),
+                    "description": d.get("description") or d.get("name"),
+                    "identifier": d.get("code") or d.get("name"),
+                    "isPartOf": p.get("name"),
+                })
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "DataCatalog",
+        "name": "DataCore Catalog",
+        "url": SITE_URL,
+        "description": desc,
+        "provider": {"@type": "Organization", "name": "DataCore", "url": "https://datacore.vn"},
+        "dataset": datasets_ld,
+    }
+    jsonld_str = json.dumps(jsonld, ensure_ascii=False).replace("</", "<\\/")
+    d = html_escape(desc)
+    return (
+        f'<meta name="description" content="{d}">\n'
+        f'<meta name="robots" content="index,follow">\n'
+        f'<link rel="canonical" href="{SITE_URL}">\n'
+        f'<meta property="og:type" content="website">\n'
+        f'<meta property="og:site_name" content="DataCore">\n'
+        f'<meta property="og:title" content="DataCore Catalog">\n'
+        f'<meta property="og:description" content="{d}">\n'
+        f'<meta property="og:url" content="{SITE_URL}">\n'
+        f'<meta name="twitter:card" content="summary">\n'
+        f'<meta name="twitter:title" content="DataCore Catalog">\n'
+        f'<meta name="twitter:description" content="{d}">\n'
+        f'<script type="application/ld+json">{jsonld_str}</script>'
+    )
+
+
 def render(catalog: dict, schemas: dict) -> str:
     payload = {"catalog": catalog, "schemas": schemas}
     data_json = json.dumps(payload, ensure_ascii=False, default=str).replace("</", "<\\/")
-    return _PAGE.replace("__DATA__", data_json)
+    return (_PAGE
+            .replace("__META__", _seo_block(catalog))
+            .replace("__DATA__", data_json))
 
 
 _PAGE = r"""<!doctype html>
@@ -79,6 +129,7 @@ _PAGE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DataCore Catalog</title>
+__META__
 <style>
   :root{--bg:#0f1419;--panel:#161c24;--panel2:#1d2530;--line:#2a3440;--txt:#e6edf3;
     --muted:#8b98a5;--accent:#3fb6ff;--accent2:#7ee787;--warn:#f0883e;--bad:#ff6b6b;--chip:#243140;}
