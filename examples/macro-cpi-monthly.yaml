@@ -1,0 +1,60 @@
+id: economic.macro.cpi_monthly
+name: Vietnam CPI by Category, Monthly
+version: "1.0.0"
+domain: economic
+product: vn-macro
+description: >
+  Monthly Consumer Price Index (Chỉ số giá tiêu dùng) released by the General
+  Statistics Office of Vietnam (Tổng cục Thống kê, GSO). Broken down by the
+  eleven main consumption categories used in official releases.
+license: public-domain
+update_frequency: monthly
+pii: false
+coverage:
+  start: "1998-01-01"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 0
+  total_rows: 4000
+primary_key: [period, category_code]
+time_column: period
+partition_columns: [period]
+schema:
+  - name: period
+    type: date
+    description: First day of the reporting month
+    nullable: false
+    format: iso8601
+  - name: category_code
+    type: string
+    description: GSO category code (01-11, or 00 for headline)
+    nullable: false
+    enum: ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"]
+  - name: category_name_vn
+    type: string
+    description: Category name in Vietnamese (e.g., 'Hàng ăn và dịch vụ ăn uống')
+    nullable: false
+  - name: category_name_en
+    type: string
+    description: Category name in English (e.g., 'Food and catering services')
+  - name: index_value
+    type: float
+    description: CPI index value (base year = 100)
+    nullable: false
+  - name: mom_pct_change
+    type: float
+    description: Month-over-month percent change (so với tháng trước)
+    unit: pct
+  - name: yoy_pct_change
+    type: float
+    description: Year-over-year percent change (so với cùng kỳ năm trước)
+    unit: pct
+  - name: ytd_pct_change
+    type: float
+    description: Year-to-date percent change (so với tháng 12 năm trước)
+    unit: pct
+tags: [macro, cpi, inflation, gso, monthly]
+source:
+  name: General Statistics Office of Vietnam (GSO)
+  url: https://www.gso.gov.vn

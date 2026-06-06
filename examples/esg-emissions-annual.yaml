@@ -1,0 +1,66 @@
+id: esg.emissions.company_annual
+name: Company-Reported GHG Emissions, Annual
+version: "0.3.0"
+domain: esg
+product: vn-esg
+description: >
+  Company-reported greenhouse gas emissions disclosed by Vietnamese listed companies
+  in annual sustainability reports (Báo cáo phát triển bền vững). Includes Scope 1,
+  Scope 2, and where reported Scope 3 emissions, plus assurance status.
+license: cc-by
+update_frequency: annual
+pii: false
+coverage:
+  start: "2018-01-01"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 0
+  total_rows: 3500
+primary_key: [ticker, fiscal_year]
+time_column: fiscal_year_end
+partition_columns: [fiscal_year]
+schema:
+  - name: ticker
+    type: string
+    description: Listed ticker of the reporting company
+    nullable: false
+    format: vn_ticker
+  - name: company_name_vn
+    type: string
+    description: Legal name of the company in Vietnamese
+  - name: fiscal_year
+    type: integer
+    description: Fiscal year of the reported emissions
+    nullable: false
+  - name: fiscal_year_end
+    type: date
+    description: Last day of the fiscal year
+    nullable: false
+  - name: scope1_emissions
+    type: float
+    description: Direct emissions from owned or controlled sources
+    unit: tCO2e
+  - name: scope2_emissions
+    type: float
+    description: Indirect emissions from purchased electricity, steam, heat, cooling
+    unit: tCO2e
+  - name: scope3_emissions
+    type: float
+    description: Other indirect emissions across the value chain (often missing)
+    unit: tCO2e
+  - name: emissions_intensity_revenue
+    type: float
+    description: Scope 1+2 emissions per unit of revenue
+    unit: tCO2e_per_billion_VND
+  - name: assurance_level
+    type: string
+    description: Level of third-party assurance on the disclosure
+    enum: [none, limited, reasonable]
+  - name: methodology
+    type: string
+    description: Reporting methodology used (e.g., 'GHG Protocol', 'ISO 14064')
+tags: [esg, emissions, ghg, sustainability, annual, vietnam]
+source:
+  name: Company sustainability reports
+  url: https://www.ssc.gov.vn

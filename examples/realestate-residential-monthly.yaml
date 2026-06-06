@@ -1,0 +1,65 @@
+id: real_estate.residential.city_monthly
+name: Vietnam Residential Price Index, Major Cities, Monthly
+version: "0.1.0"
+domain: real_estate
+product: vn-realestate
+description: >
+  Monthly residential property price index for Vietnam's major cities (Hà Nội,
+  Thành phố Hồ Chí Minh, Đà Nẵng, Hải Phòng, Cần Thơ). Tracks asking prices for
+  apartments and houses scraped from leading listing portals.
+license: proprietary
+update_frequency: monthly
+pii: false
+coverage:
+  start: "2019-01-01"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 0
+  total_rows: 6000
+primary_key: [period, city_code, property_type]
+time_column: period
+partition_columns: [period]
+schema:
+  - name: period
+    type: date
+    description: First day of the reporting month
+    nullable: false
+    format: iso8601
+  - name: city_code
+    type: string
+    description: City identifier used by the GSO
+    nullable: false
+    enum: [HAN, HCM, DAD, HPH, CTO]
+  - name: city_name_vn
+    type: string
+    description: City name in Vietnamese (e.g., 'Hà Nội', 'Thành phố Hồ Chí Minh')
+    nullable: false
+  - name: property_type
+    type: string
+    description: Type of residential property
+    nullable: false
+    enum: [apartment, townhouse, villa, land]
+  - name: median_price_per_sqm
+    type: float
+    description: Median asking price per square meter
+    unit: VND_per_sqm
+  - name: price_index
+    type: float
+    description: Indexed price level (Jan 2019 = 100)
+  - name: mom_pct_change
+    type: float
+    description: Month-over-month percent change
+    unit: pct
+  - name: yoy_pct_change
+    type: float
+    description: Year-over-year percent change
+    unit: pct
+  - name: listing_count
+    type: integer
+    description: Number of unique listings observed in the period
+    unit: listings
+tags: [real-estate, residential, housing, price-index, monthly, vietnam]
+source:
+  name: DataCore Real Estate Pipeline
+  url: https://datacore.vn

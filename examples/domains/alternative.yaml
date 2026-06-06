@@ -1,0 +1,8 @@
+id: alternative
+name: Alternative Data
+description: >
+  Non-traditional datasets useful for forecasting fundamentals or consumer demand
+  ahead of official releases - e-commerce, mobility, satellite, web traffic, and
+  similar signals, tailored to the Vietnamese market.
+icon: https://datacore.vn/icons/alternative.svg
+tags: [alt-data, ecommerce, web-traffic, mobility]

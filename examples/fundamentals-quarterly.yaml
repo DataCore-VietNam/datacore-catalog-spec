@@ -1,0 +1,72 @@
+id: fundamentals.vas.quarterly
+name: VAS Quarterly Fundamentals
+version: "1.0.0"
+domain: financial
+product: vn-fundamentals
+description: >
+  Quarterly financial statements (Báo cáo tài chính) for listed Vietnamese companies
+  in VAS (Vietnamese Accounting Standards) format. Includes income statement, balance
+  sheet, and cash flow statement line items normalized across companies.
+license: proprietary
+update_frequency: quarterly
+pii: false
+coverage:
+  start: "2008-01-01"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 0
+  total_rows: 60000
+primary_key: [ticker, period_end, statement_type]
+time_column: period_end
+partition_columns: [period_end]
+schema:
+  - name: ticker
+    type: string
+    description: Listed ticker (mã chứng khoán)
+    nullable: false
+    format: vn_ticker
+  - name: period_end
+    type: date
+    description: Last day of the reporting quarter (kỳ báo cáo)
+    nullable: false
+  - name: fiscal_year
+    type: integer
+    description: Fiscal year (năm tài chính)
+    nullable: false
+  - name: fiscal_quarter
+    type: integer
+    description: Quarter number (1-4)
+    nullable: false
+    enum: [1, 2, 3, 4]
+  - name: statement_type
+    type: string
+    description: Which financial statement this row belongs to
+    nullable: false
+    enum: [income_statement, balance_sheet, cash_flow]
+  - name: report_type
+    type: string
+    description: Audit status of the report
+    enum: [audited, unaudited, restated]
+  - name: line_item_code
+    type: string
+    description: VAS line item code (e.g., '01' for Doanh thu bán hàng)
+    nullable: false
+  - name: line_item_name_vn
+    type: string
+    description: Vietnamese name of the line item (tên chỉ tiêu)
+  - name: line_item_name_en
+    type: string
+    description: English translation of the line item
+  - name: value
+    type: float
+    description: Monetary value of the line item
+    unit: VND
+  - name: currency
+    type: string
+    description: ISO 4217 currency code
+    enum: [VND, USD]
+tags: [fundamentals, vas, financial-statements, quarterly, vietnam]
+source:
+  name: Vietnam State Securities Commission (UBCKNN)
+  url: https://www.ssc.gov.vn

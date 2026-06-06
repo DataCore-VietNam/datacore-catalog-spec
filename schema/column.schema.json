@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datacore.vn/schema/column.schema.json",
+  "title": "DataCore Column",
+  "description": "A single column in a dataset's logical schema. Used inline inside a dataset's `schema` array, or standalone for column-level documentation.",
+  "type": "object",
+  "required": ["name", "type"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Column name as it appears in the data (snake_case recommended).",
+      "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Logical data type. Maps to physical types per engine (Parquet, DuckDB, etc.).",
+      "enum": ["string", "integer", "float", "boolean", "date", "datetime", "json"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Plain-language description of what the column means and how it should be interpreted."
+    },
+    "nullable": {
+      "type": "boolean",
+      "description": "Whether the column may contain null values. Defaults to true.",
+      "default": true
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measure for numeric columns (e.g., 'VND', 'shares', 'pct', 'tCO2e')."
+    },
+    "enum": {
+      "type": "array",
+      "description": "If the column is categorical, the closed set of allowed values.",
+      "items": {},
+      "minItems": 1
+    },
+    "format": {
+      "type": "string",
+      "description": "Optional format hint for parsers and validators (e.g., 'iso8601', 'vn_ticker', 'isin')."
+    },
+    "examples": {
+      "type": "array",
+      "description": "Sample values to help readers understand the column quickly.",
+      "items": {}
+    }
+  }
+}

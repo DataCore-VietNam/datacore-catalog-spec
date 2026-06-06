@@ -1,0 +1,7 @@
+id: financial
+name: Financial
+description: >
+  Market data, fundamentals, corporate actions, and other directly finance-related
+  datasets covering Vietnamese listed equities, fixed income, derivatives, and funds.
+icon: https://datacore.vn/icons/financial.svg
+tags: [equity, fixed-income, fundamentals, markets]

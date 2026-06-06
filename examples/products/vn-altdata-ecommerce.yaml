@@ -1,0 +1,13 @@
+id: vn-altdata-ecommerce
+name: VN E-Commerce Alt-Data
+domain: alternative
+description: >
+  Alternative datasets derived from Vietnamese e-commerce platforms (Shopee, Lazada,
+  Tiki) - daily transaction proxies, category-level GMV estimates, and seller
+  region breakdowns used as a leading indicator for retail consumption.
+vendor: DataCore
+coverage:
+  start: "2021-01-01"
+  end: rolling
+  geographies: [VN]
+tags: [alt-data, ecommerce, retail, consumer]

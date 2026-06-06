@@ -1,0 +1,44 @@
+name: refresh-catalog
+
+# Pulls the live DataCore catalog from the public demo API and commits the
+# snapshot. Runs monthly (and on demand). The push to main triggers the
+# pages workflow, which rebuilds and redeploys the site from the new snapshot.
+
+on:
+  schedule:
+    # 01:00 UTC on the 1st of each month = 08:00 ICT
+    - cron: "0 1 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch live catalog
+        run: python scripts/fetch_catalog.py --out catalog
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog/
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+          else
+            git commit -m "chore: refresh catalog snapshot ($(date -u +%Y-%m-%d))"
+            git push
+          fi

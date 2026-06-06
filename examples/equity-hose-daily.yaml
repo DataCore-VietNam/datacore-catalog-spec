@@ -1,0 +1,74 @@
+id: equity.hose.daily
+name: HOSE Full Universe Daily Prices
+version: "1.0.0"
+domain: financial
+product: vn-equity
+description: >
+  Daily OHLCV for every listed stock on the Ho Chi Minh City Stock Exchange (Sở Giao
+  dịch Chứng khoán Thành phố Hồ Chí Minh, HOSE). Covers ~400 tickers and includes
+  foreign room and adjusted close.
+license: proprietary
+update_frequency: daily
+pii: false
+coverage:
+  start: "2000-07-28"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 400
+  total_rows: 2400000
+primary_key: [trade_date, ticker]
+time_column: trade_date
+partition_columns: [trade_date]
+schema:
+  - name: trade_date
+    type: date
+    description: Trading date (Asia/Ho_Chi_Minh)
+    nullable: false
+    format: iso8601
+  - name: ticker
+    type: string
+    description: HOSE ticker (mã chứng khoán)
+    nullable: false
+    format: vn_ticker
+    examples: [VNM, VIC, HPG, FPT]
+  - name: open
+    type: float
+    description: Opening price
+    unit: VND
+  - name: high
+    type: float
+    description: Daily high
+    unit: VND
+  - name: low
+    type: float
+    description: Daily low
+    unit: VND
+  - name: close
+    type: float
+    description: Closing price (giá đóng cửa)
+    unit: VND
+  - name: adj_close
+    type: float
+    description: Close adjusted for splits, dividends, and rights issues
+    unit: VND
+  - name: volume
+    type: integer
+    description: Matched volume in shares
+    unit: shares
+  - name: value
+    type: float
+    description: Matched value (giá trị khớp lệnh)
+    unit: VND
+  - name: foreign_buy_volume
+    type: integer
+    description: Volume bought by foreign investors (khối ngoại mua)
+    unit: shares
+  - name: foreign_sell_volume
+    type: integer
+    description: Volume sold by foreign investors (khối ngoại bán)
+    unit: shares
+tags: [equity, hose, ohlcv, daily, vietnam, foreign-flow]
+source:
+  name: HOSE
+  url: https://www.hsx.vn

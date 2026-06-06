@@ -1,0 +1,268 @@
+{
+  "source": "https://gateway.datacore.vn/data/group",
+  "generatedAtUtc": "2026-06-06T06:50:05Z",
+  "generatedAtIct": "2026-06-06 13:50 ICT",
+  "domainTypes": [
+    "ECONOMY",
+    "LOCATION",
+    "MARKET",
+    "MEDIA",
+    "ORGANIZATION",
+    "PEOPLE"
+  ],
+  "productsTotal": 8,
+  "datasetsTotal": 25,
+  "domains": {
+    "ECONOMY": {
+      "label": "Economy",
+      "products": [
+        {
+          "id": 12,
+          "name": "MacroEconomics",
+          "description": "The Macroeconomic Indicators dataset delivers standardized, structured, and regularly updated macroeconomic data for Vietnam, including GDP, inflation (CPI), interest rates, exchange rates, trade balance, and other key national indicators. It supports economic analysis, market forecasting, financial modeling, and strategic decision-making across banking, investment, fintech, and public sector applications.",
+          "descriptionVi": "",
+          "datasetCount": 2,
+          "datasets": [
+            {
+              "code": "gross_domestic_product_dataset_ds",
+              "name": "Gross Domestic Product",
+              "description": "Country-level GDP data over time, covering both current and constant price measures.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "inflation_dataset",
+              "name": "Inflation",
+              "description": "Country-level Consumer Price Index (CPI) data, including inflation rates and average price levels.",
+              "descriptionVi": ""
+            }
+          ]
+        }
+      ]
+    },
+    "LOCATION": {
+      "label": "Location",
+      "products": [
+        {
+          "id": 1,
+          "name": "Income",
+          "description": "The Vietnam Income Prediction Suite delivers multi-scale estimates of average monthly income across Vietnam's provinces, districts, and wards. Built to overcome gaps in official income statistics, it supports detailed economic segmentation and planning at national and local levels.",
+          "descriptionVi": "",
+          "datasetCount": 3,
+          "datasets": [
+            {
+              "code": "dataset_district_income",
+              "name": "Income Prediction by District",
+              "description": "Model-driven predictions of average monthly income at the district level across Vietnam.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "dataset_province_income",
+              "name": "Full Income Prediction",
+              "description": "Comprehensive income estimations for provinces, districts, and wards throughout Vietnam.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "dataset_ward_income",
+              "name": "Income Prediction by Ward",
+              "description": "Predicted average monthly income for each ward in Vietnam, for fine-grained urban and rural analysis.",
+              "descriptionVi": ""
+            }
+          ]
+        }
+      ]
+    },
+    "MARKET": {
+      "label": "Market",
+      "products": [
+        {
+          "id": 2,
+          "name": "Company",
+          "description": "The Company data product offers standardized and continuously updated records of legal entities registered in Vietnam, including core business details, registration changes, legal status, and ownership data.",
+          "descriptionVi": "",
+          "datasetCount": 3,
+          "datasets": [
+            {
+              "code": "company_information",
+              "name": "Company Information",
+              "description": "Publicly available business information like tax code, industry, address, and more.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "vsic",
+              "name": "VSIC",
+              "description": "A clean, machine-readable reference of Vietnam's VSIC 2018 codes with full hierarchy.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "vsic_isic_naics_nace_dataset",
+              "name": "VSIC ISIC NAICS NACE",
+              "description": "A crosswalk linking VSIC 2018 to NAICS and NACE, including mapping type and confidence.",
+              "descriptionVi": ""
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Stock",
+          "description": "The Stock data product provides clean, daily trading data for all listed companies on Vietnam's exchanges, supporting market tracking, strategy development, and portfolio analysis.",
+          "descriptionVi": "",
+          "datasetCount": 7,
+          "datasets": [
+            {
+              "code": "dataset_stock_events",
+              "name": "Stock Events",
+              "description": "Key events affecting listed companies: corporate actions, earnings releases, and more.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "dataset_holder_trading",
+              "name": "Holder Trading",
+              "description": "Transactions made by insiders and large shareholders in Vietnam's stock market.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "dataset_historical_price",
+              "name": "Historical Price",
+              "description": "Daily trading data for all stocks listed on HOSE, HNX, and UPCoM (adjusted and unadjusted).",
+              "descriptionVi": ""
+            },
+            {
+              "code": "dataset_historical_dividends",
+              "name": "Historical Dividends",
+              "description": "All cash and stock dividend events declared by companies on HOSE, HNX, and UPCoM.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "Narrative Index",
+              "name": "Narrative Index",
+              "description": "How news-derived topics affect stock price movements, updated monthly.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "FGI",
+              "name": "FGI Index",
+              "description": "Calculated Fear and Greed Index (FGI) for the Vietnamese stock market, based on the VN30 index.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "volatility_index_dataset",
+              "name": "Volatility Index",
+              "description": "Market volatility index for the Vietnamese stock market.",
+              "descriptionVi": ""
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Company Fundamentals",
+          "description": "Vietnam Fundamentals delivers clean, comparable, and fully reconciled firm-level accounting data for every company listed on HOSE, HNX, and UPCoM, covering all sectors from 2000 onward.",
+          "descriptionVi": "",
+          "datasetCount": 2,
+          "datasets": [
+            {
+              "code": "fundamental_annual",
+              "name": "Fundamental Annual",
+              "description": "Year-end income statements, balance sheets, and cash flow statements for HOSE, HNX, and UPCoM.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "fundamental_quaterly",
+              "name": "Fundamental Quarterly",
+              "description": "Quarterly income statements, balance sheets, and cash flow statements for HOSE, HNX, and UPCoM.",
+              "descriptionVi": ""
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "Mutual Fund",
+          "description": "Comprehensive information about mutual funds in Vietnam, including fund identification, classification, NAV performance, and detailed asset allocation.",
+          "descriptionVi": "",
+          "datasetCount": 5,
+          "datasets": [
+            {
+              "code": "fund_information",
+              "name": "Fund Information",
+              "description": "Fund identification and classification.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "nav_report",
+              "name": "NAV Report",
+              "description": "Net asset value (NAV) performance over time.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "top_holding_list",
+              "name": "Top Holding List",
+              "description": "Largest holdings per fund.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "industry_holding_list",
+              "name": "Industry Holding List",
+              "description": "Fund holdings broken down by industry.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "asset_holding_list",
+              "name": "Asset Holding List",
+              "description": "Detailed asset allocation per fund.",
+              "descriptionVi": ""
+            }
+          ]
+        }
+      ]
+    },
+    "MEDIA": {
+      "label": "Media",
+      "products": [
+        {
+          "id": 4,
+          "name": "News",
+          "description": "The News data product delivers curated, tagged, and structured news content from reputable Vietnamese sources, enabling users to track business, economic, and regulatory events.",
+          "descriptionVi": "",
+          "datasetCount": 1,
+          "datasets": [
+            {
+              "code": "dataset_news",
+              "name": "News",
+              "description": "Curated, tagged, structured news content from reputable Vietnamese sources.",
+              "descriptionVi": ""
+            }
+          ]
+        }
+      ]
+    },
+    "ORGANIZATION": {
+      "label": "Organization",
+      "products": [
+        {
+          "id": 9,
+          "name": "Bank",
+          "description": "The Bank data product provides verified, up-to-date information on all licensed banks operating in Vietnam, including legal identity, branch networks, shareholder structure, and regulatory status.",
+          "descriptionVi": "",
+          "datasetCount": 2,
+          "datasets": [
+            {
+              "code": "bank_fundamentals_quarterly",
+              "name": "Bank Fundamentals Quarterly",
+              "description": "Quarterly fundamentals for licensed Vietnamese banks.",
+              "descriptionVi": ""
+            },
+            {
+              "code": "bank_fundamentals_annual",
+              "name": "Bank Fundamentals Annual",
+              "description": "Annual fundamentals for licensed Vietnamese banks.",
+              "descriptionVi": ""
+            }
+          ]
+        }
+      ]
+    },
+    "PEOPLE": {
+      "label": "People",
+      "products": []
+    }
+  }
+}

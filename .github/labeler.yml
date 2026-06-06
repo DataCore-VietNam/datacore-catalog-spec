@@ -1,0 +1,23 @@
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ["**/*.md", "docs/**", "README*"]
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [".github/**"]
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file: ["tests/**", "test/**", "**/*_test.*", "**/test_*.*"]
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "pyproject.toml"
+          - "poetry.lock"
+          - "package.json"
+          - "package-lock.json"
+          - "DESCRIPTION"
+          - "renv.lock"
+          - "Cargo.toml"
+          - "Cargo.lock"

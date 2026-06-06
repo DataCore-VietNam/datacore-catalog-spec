@@ -1,0 +1,42 @@
+id: equity.vn30.daily
+name: VN30 Daily Prices
+domain: financial
+product: vn-equity
+description: Daily OHLCV for VN30 index constituents, sourced from HOSE.
+license: proprietary
+update_frequency: daily
+coverage:
+  start: "2012-02-06"
+  end: rolling
+  geographies: [VN]
+schema:
+  - name: trade_date
+    type: date
+    description: Trading date
+    nullable: false
+  - name: ticker
+    type: string
+    description: HOSE ticker symbol
+    nullable: false
+  - name: open
+    type: float
+    unit: VND
+  - name: high
+    type: float
+    unit: VND
+  - name: low
+    type: float
+    unit: VND
+  - name: close
+    type: float
+    unit: VND
+  - name: volume
+    type: integer
+    unit: shares
+  - name: value
+    type: float
+    unit: VND
+tags: [equity, vn30, hose, ohlcv, daily]
+source:
+  name: HOSE
+  url: https://www.hsx.vn

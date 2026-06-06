@@ -1,0 +1,12 @@
+id: vn-equity
+name: VN Equity
+domain: financial
+description: >
+  Listed Vietnamese equity datasets - prices, volumes, foreign flows, index
+  membership, and reference data - across HOSE, HNX, and UPCoM.
+vendor: DataCore
+coverage:
+  start: "2000-07-28"
+  end: rolling
+  geographies: [VN]
+tags: [equity, hose, hnx, upcom]

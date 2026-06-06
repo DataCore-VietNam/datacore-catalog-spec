@@ -1,0 +1,61 @@
+id: alternative.ecommerce.shopee_daily
+name: Shopee Vietnam Daily Transaction Counts
+version: "0.2.0"
+domain: alternative
+product: vn-altdata-ecommerce
+description: >
+  Daily aggregated transaction counts and gross merchandise value on Shopee Vietnam,
+  bucketed by product category and seller region. Sourced from public crawl of the
+  Shopee marketplace; useful as a high-frequency proxy for retail consumption.
+license: proprietary
+update_frequency: daily
+pii: false
+coverage:
+  start: "2021-01-01"
+  end: rolling
+  geographies: [VN]
+cardinality:
+  rows_per_day: 3500
+  total_rows: 6000000
+primary_key: [observation_date, category, region]
+time_column: observation_date
+partition_columns: [observation_date]
+schema:
+  - name: observation_date
+    type: date
+    description: Date of the observation (Asia/Ho_Chi_Minh)
+    nullable: false
+    format: iso8601
+  - name: category
+    type: string
+    description: Shopee top-level category (danh mục)
+    nullable: false
+    examples: [Điện tử, Thời trang nữ, Mẹ & Bé, Nhà cửa & Đời sống]
+  - name: region
+    type: string
+    description: Seller region (vùng/miền)
+    nullable: false
+    enum: [Bắc, Trung, Nam]
+  - name: transaction_count
+    type: integer
+    description: Estimated number of completed orders
+    unit: orders
+  - name: unique_buyers
+    type: integer
+    description: Distinct buyer accounts observed
+    unit: accounts
+  - name: gmv_estimate
+    type: float
+    description: Estimated gross merchandise value
+    unit: VND
+  - name: avg_order_value
+    type: float
+    description: Average value per order
+    unit: VND
+  - name: coverage_score
+    type: float
+    description: Confidence score 0-1 indicating how complete the crawl was for this bucket
+tags: [alternative, ecommerce, shopee, consumer, daily]
+source:
+  name: DataCore Alt-Data Pipeline
+  url: https://datacore.vn

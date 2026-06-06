@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datacore.vn/schema/dataset.schema.json",
+  "title": "DataCore Dataset",
+  "description": "A single dataset definition. Datasets are the leaf level of the catalog taxonomy (domain -> product -> dataset).",
+  "type": "object",
+  "required": ["id", "name", "domain", "product", "description", "schema"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$",
+      "description": "Dot-separated dataset identifier (e.g., equity.vn30.daily)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable display name."
+    },
+    "version": {
+      "type": "string",
+      "description": "Optional semantic version of the dataset definition (e.g., '1.0.0'). Bump on breaking schema changes."
+    },
+    "domain": {
+      "type": "string",
+      "description": "Parent domain id.",
+      "enum": ["financial", "alternative", "economic", "esg", "reference", "real_estate"]
+    },
+    "product": {
+      "type": "string",
+      "description": "Parent product id (slug, e.g., 'vn-equity')."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "What this dataset contains, sourced from where, and intended use."
+    },
+    "license": {
+      "type": "string",
+      "description": "License under which the dataset is distributed.",
+      "enum": ["proprietary", "cc-by", "cc-by-sa", "cc0", "mit", "public-domain", "other"]
+    },
+    "update_frequency": {
+      "type": "string",
+      "description": "How often the dataset is refreshed.",
+      "enum": ["realtime", "intraday", "daily", "weekly", "monthly", "quarterly", "annual", "irregular"]
+    },
+    "pii": {
+      "type": "boolean",
+      "description": "Whether the dataset contains personally identifiable information.",
+      "default": false
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Time and geographic coverage.",
+      "properties": {
+        "start": { "type": "string", "description": "Earliest date covered (ISO 8601)." },
+        "end": { "type": "string", "description": "Latest date covered, or 'rolling'." },
+        "geographies": {
+          "type": "array",
+          "description": "ISO 3166-1 alpha-2 country codes.",
+          "items": { "type": "string", "pattern": "^[A-Z]{2}$" }
+        }
+      }
+    },
+    "cardinality": {
+      "type": "object",
+      "description": "Approximate row-count expectations. Helps consumers plan storage and queries.",
+      "properties": {
+        "rows_per_day": {
+          "type": "integer",
+          "description": "Approximate rows produced per update cycle (day, month, etc.).",
+          "minimum": 0
+        },
+        "total_rows": {
+          "type": "integer",
+          "description": "Approximate total row count across full history.",
+          "minimum": 0
+        }
+      }
+    },
+    "primary_key": {
+      "type": "array",
+      "description": "Column names that together uniquely identify a row.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "time_column": {
+      "type": "string",
+      "description": "Name of the column that represents event time (used for partitioning, joins, time-series ops)."
+    },
+    "partition_columns": {
+      "type": "array",
+      "description": "Columns the data is physically partitioned by in the lake.",
+      "items": { "type": "string" }
+    },
+    "schema": {
+      "type": "array",
+      "description": "Ordered list of columns in the dataset. See column.schema.json.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["string", "integer", "float", "boolean", "date", "datetime", "json"]
+          },
+          "description": { "type": "string" },
+          "nullable": { "type": "boolean", "default": true },
+          "unit": { "type": "string" },
+          "enum": { "type": "array", "items": {}, "minItems": 1 },
+          "format": { "type": "string" },
+          "examples": { "type": "array", "items": {} }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Freeform tags for search and filtering.",
+      "items": { "type": "string" }
+    },
+    "source": {
+      "type": "object",
+      "description": "Upstream source attribution.",
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

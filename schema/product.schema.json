@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datacore.vn/schema/product.schema.json",
+  "title": "DataCore Product",
+  "description": "A product within a domain. A product is a coherent commercial or thematic bundle of datasets (e.g., 'VN Equity', 'VN Macroeconomic Indicators'). Datasets reference their parent product via the `product` field.",
+  "type": "object",
+  "required": ["id", "name", "domain", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable machine identifier for the product, slug-style (e.g., 'vn-equity').",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable display name for the product.",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "description": "The id of the parent domain. Must match a value from domain.schema.json.",
+      "enum": ["financial", "alternative", "economic", "esg", "reference", "real_estate"]
+    },
+    "description": {
+      "type": "string",
+      "description": "What this product is, who maintains it, and what kind of datasets it bundles.",
+      "minLength": 10
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Optional vendor or maintainer name (e.g., 'DataCore', 'GSO', 'HOSE')."
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Aggregate coverage of all datasets that belong to this product.",
+      "properties": {
+        "start": {
+          "type": "string",
+          "description": "Earliest date covered, ISO 8601 (YYYY-MM-DD)."
+        },
+        "end": {
+          "type": "string",
+          "description": "Latest date covered, or 'rolling' if continuously updated."
+        },
+        "geographies": {
+          "type": "array",
+          "description": "ISO 3166-1 alpha-2 country codes covered by the product.",
+          "items": { "type": "string", "pattern": "^[A-Z]{2}$" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Freeform tags for search and filtering.",
+      "items": { "type": "string" }
+    }
+  }
+}
