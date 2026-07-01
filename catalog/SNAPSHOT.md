@@ -1,7 +1,7 @@
 # DataCore catalog snapshot
 
 Source: https://gateway.datacore.vn/data/group
-Generated: 2026-06-06 13:50 ICT
+Generated: 2026-07-01 12:23 ICT
 
 6 domains, 8 products, 25 datasets.
 
@@ -32,7 +32,7 @@ Generated: 2026-06-06 13:50 ICT
 - Historical Dividends `dataset_historical_dividends`
 - Narrative Index `Narrative Index`
 - FGI Index `FGI`
-- Volatility Index `volatility_index_dataset`
+- VOLATILITY INDEX `volatility_index_dataset`
 
 ### Company Fundamentals (2 datasets)
 - Fundamental Annual `fundamental_annual`
@@ -40,7 +40,7 @@ Generated: 2026-06-06 13:50 ICT
 
 ### Mutual Fund (5 datasets)
 - Fund Information `fund_information`
-- NAV Report `nav_report`
+- NAV REPORT `nav_report`
 - Top Holding List `top_holding_list`
 - Industry Holding List `industry_holding_list`
 - Asset Holding List `asset_holding_list`

@@ -1,7 +1,7 @@
 {
   "source": "https://gateway.datacore.vn/data/group",
-  "generatedAtUtc": "2026-06-06T06:50:05Z",
-  "generatedAtIct": "2026-06-06 13:50 ICT",
+  "generatedAtUtc": "2026-07-01T05:23:57Z",
+  "generatedAtIct": "2026-07-01 12:23 ICT",
   "domainTypes": [
     "ECONOMY",
     "LOCATION",
@@ -19,21 +19,21 @@
         {
           "id": 12,
           "name": "MacroEconomics",
-          "description": "The Macroeconomic Indicators dataset delivers standardized, structured, and regularly updated macroeconomic data for Vietnam, including GDP, inflation (CPI), interest rates, exchange rates, trade balance, and other key national indicators. It supports economic analysis, market forecasting, financial modeling, and strategic decision-making across banking, investment, fintech, and public sector applications.",
-          "descriptionVi": "",
+          "description": "The Macroeconomic Indicators dataset delivers standardized, structured, and regularly updated macroeconomic data for Vietnam, including GDP, inflation (CPI), interest rates, exchange rates, trade balance, and other key national indicators. Designed for seamless API integration, it supports economic analysis, market forecasting, financial modeling, and strategic decision-making across banking, investment, fintech, and public sector applications.",
+          "descriptionVi": "Bộ dữ liệu Chỉ số Kinh tế Vĩ mô cung cấp các dữ liệu kinh tế vĩ mô của Việt Nam đã được chuẩn hóa, cấu trúc hóa và cập nhật định kỳ, bao gồm GDP, lạm phát (CPI), lãi suất, tỷ giá, cán cân thương mại và các chỉ số kinh tế trọng yếu khác. Bộ dữ liệu được thiết kế sẵn sàng tích hợp qua API, phục vụ phân tích kinh tế, dự báo thị trường, mô hình tài chính và ra quyết định chiến lược trong lĩnh vực ngân hàng, đầu tư, fintech và khu vực công.",
           "datasetCount": 2,
           "datasets": [
             {
               "code": "gross_domestic_product_dataset_ds",
               "name": "Gross Domestic Product",
-              "description": "Country-level GDP data over time, covering both current and constant price measures.",
-              "descriptionVi": ""
+              "description": "This dataset provides country-level GDP data over time, covering both current and constant price measures, along with per-capita and growth indicators. It supports macroeconomic analysis, cross-country comparisons, and long-term economic trend studies.",
+              "descriptionVi": "Bộ dữ liệu này cung cấp số liệu GDP theo từng quốc gia qua các giai đoạn thời gian, bao gồm cả giá hiện hành và giá cố định, cùng với các chỉ số GDP bình quân đầu người và tốc độ tăng trưởng. Dữ liệu này hỗ trợ phân tích kinh tế vĩ mô, so sánh giữa các quốc gia và nghiên cứu xu hướng kinh tế dài hạn."
             },
             {
               "code": "inflation_dataset",
               "name": "Inflation",
-              "description": "Country-level Consumer Price Index (CPI) data, including inflation rates and average price levels.",
-              "descriptionVi": ""
+              "description": "This dataset provides country-level Consumer Price Index (CPI) data, including inflation rates and average price index levels over time. It supports inflation monitoring, cost-of-living analysis, and macroeconomic research.",
+              "descriptionVi": "Bộ dữ liệu này cung cấp dữ liệu Chỉ số Giá Tiêu dùng (CPI) ở cấp độ quốc gia, bao gồm tỷ lệ lạm phát và mức chỉ số giá trung bình theo thời gian. Bộ dữ liệu này hỗ trợ việc theo dõi lạm phát, phân tích chi phí sinh hoạt và nghiên cứu kinh tế vĩ mô."
             }
           ]
         }
@@ -45,27 +45,27 @@
         {
           "id": 1,
           "name": "Income",
-          "description": "The Vietnam Income Prediction Suite delivers multi-scale estimates of average monthly income across Vietnam's provinces, districts, and wards. Built to overcome gaps in official income statistics, it supports detailed economic segmentation and planning at national and local levels.",
-          "descriptionVi": "",
+          "description": "The Vietnam Income Prediction Suite delivers multi-scale estimates of average monthly income across Vietnam’s provinces, districts, and wards. Built to overcome the gaps in official income statistics, this product supports detailed economic segmentation and planning at national and local levels. The suite is optimized for use in both urban and rural contexts, offering insights where ground-truth data is limited or outdated.",
+          "descriptionVi": "Bộ Dự báo Thu nhập Việt Nam cung cấp ước tính thu nhập bình quân hàng tháng ở nhiều cấp độ (tỉnh, quận/huyện, xã/phường). Được xây dựng nhằm khắc phục khoảng trống trong thống kê thu nhập chính thức, bộ dữ liệu hỗ trợ phân tích và hoạch định kinh tế chi tiết ở cả cấp quốc gia và địa phương, phù hợp cho cả khu vực đô thị và nông thôn",
           "datasetCount": 3,
           "datasets": [
             {
               "code": "dataset_district_income",
               "name": "Income Prediction by District",
-              "description": "Model-driven predictions of average monthly income at the district level across Vietnam.",
-              "descriptionVi": ""
+              "description": "This dataset provides model-driven predictions of average monthly income at the district level across Vietnam. It supports localized economic insights in areas where official income data is limited or unavailable, enabling targeted analysis for both private and public sector use.",
+              "descriptionVi": "Cung cấp dự báo thu nhập bình quân hàng tháng ở cấp quận/huyện trên toàn quốc, dựa trên mô hình dữ liệu. Phù hợp cho phân tích kinh tế địa phương tại các khu vực thiếu hoặc không có số liệu thu nhập chính thức, phục vụ cả khu vực công và tư."
             },
             {
               "code": "dataset_province_income",
               "name": "Full Income Prediction",
-              "description": "Comprehensive income estimations for provinces, districts, and wards throughout Vietnam.",
-              "descriptionVi": ""
+              "description": "The Full Income Prediction dataset provides comprehensive income estimations for provinces, districts, and wards throughout Vietnam. Built to fill gaps in official income statistics, it enables multi-scale socio-economic analysis for public policy, business strategy, and financial services.",
+              "descriptionVi": "Bộ dữ liệu cung cấp ước tính thu nhập đầy đủ cho các cấp tỉnh, quận/huyện và xã/phường trên toàn Việt Nam. Giải quyết các khoảng trống trong thống kê chính thức, hỗ trợ phân tích kinh tế - xã hội đa cấp độ cho chính sách công, chiến lược kinh doanh và dịch vụ tài chính."
             },
             {
               "code": "dataset_ward_income",
               "name": "Income Prediction by Ward",
-              "description": "Predicted average monthly income for each ward in Vietnam, for fine-grained urban and rural analysis.",
-              "descriptionVi": ""
+              "description": "This dataset offers predicted average monthly income for each ward in Vietnam, enabling fine-grained analysis in urban and rural settings. It bridges critical data gaps in official income reporting, providing actionable insights at the sub-district level.",
+              "descriptionVi": "Cung cấp dự báo thu nhập bình quân hàng tháng đến từng xã/phường, cho phép phân tích chi tiết ở cấp vi mô tại cả đô thị và nông thôn, bổ sung dữ liệu còn thiếu trong hệ thống báo cáo thu nhập chính thức."
             }
           ]
         }
@@ -77,138 +77,138 @@
         {
           "id": 2,
           "name": "Company",
-          "description": "The Company data product offers standardized and continuously updated records of legal entities registered in Vietnam, including core business details, registration changes, legal status, and ownership data.",
-          "descriptionVi": "",
+          "description": "The Company data product offers standardized and continuously updated records of legal entities registered in Vietnam. It includes core business details, registration changes, legal status, and ownership data, enabling deep visibility into the corporate landscape.",
+          "descriptionVi": "Bộ dữ liệu doanh nghiệp cung cấp thông tin chuẩn hóa và được cập nhật liên tục về các pháp nhân đăng ký tại Việt Nam, bao gồm thông tin pháp lý, tình trạng hoạt động, thay đổi đăng ký và cấu trúc sở hữu, giúp quan sát toàn diện bức tranh doanh nghiệp.",
           "datasetCount": 3,
           "datasets": [
             {
               "code": "company_information",
               "name": "Company Information",
-              "description": "Publicly available business information like tax code, industry, address, and more.",
-              "descriptionVi": ""
+              "description": "The dataset contains publicly available business information like tax code, industry, address, and more.",
+              "descriptionVi": "Chứa các thông tin doanh nghiệp công khai như mã số thuế, ngành nghề kinh doanh, địa chỉ và các dữ liệu cơ bản khác."
             },
             {
               "code": "vsic",
               "name": "VSIC",
-              "description": "A clean, machine-readable reference of Vietnam's VSIC 2018 codes with full hierarchy.",
-              "descriptionVi": ""
+              "description": "A clean, machine-readable reference of Vietnam’s VSIC 2018 codes with full hierarchy. Ideal for standardizing industry tags across CRMs, data warehouses, and BI apps with stable keys and validity metadata.",
+              "descriptionVi": "Bộ tham chiếu VSIC 2018 được chuẩn hóa, có cấu trúc phân cấp đầy đủ và dễ xử lý bằng máy. Phù hợp để chuẩn hóa ngành nghề trong CRM, kho dữ liệu và hệ thống BI."
             },
             {
               "code": "vsic_isic_naics_nace_dataset",
               "name": "VSIC ISIC NAICS NACE",
-              "description": "A crosswalk linking VSIC 2018 to NAICS and NACE, including mapping type and confidence.",
-              "descriptionVi": ""
+              "description": "A curated crosswalk that links VSIC 2018 to NAICS and NACE, including mapping type and confidence. Use it to translate industry codes across jurisdictions for unified analytics, reporting, and partner data onboarding.",
+              "descriptionVi": "Bảng ánh xạ liên kết VSIC 2018 với các hệ mã ngành quốc tế (NAICS, NACE), kèm loại ánh xạ và mức độ tin cậy, hỗ trợ phân tích và tích hợp dữ liệu đa quốc gia."
             }
           ]
         },
         {
           "id": 5,
           "name": "Stock",
-          "description": "The Stock data product provides clean, daily trading data for all listed companies on Vietnam's exchanges, supporting market tracking, strategy development, and portfolio analysis.",
-          "descriptionVi": "",
+          "description": "The Stock data product provides clean, daily trading data for all listed companies on Vietnam’s exchanges. Designed for investors, analysts, and fintechs, it supports market tracking, strategy development, and portfolio analysis.",
+          "descriptionVi": "Cung cấp dữ liệu giao dịch hàng ngày đã được làm sạch cho toàn bộ cổ phiếu niêm yết tại Việt Nam, phục vụ nhà đầu tư, chuyên gia phân tích và các nền tảng fintech.",
           "datasetCount": 7,
           "datasets": [
             {
               "code": "dataset_stock_events",
               "name": "Stock Events",
-              "description": "Key events affecting listed companies: corporate actions, earnings releases, and more.",
-              "descriptionVi": ""
+              "description": "The Stock Events dataset captures key events affecting listed companies in Vietnam, including corporate actions, earnings releases, shareholder meetings, executive changes, and regulatory disclosures. It supports timely, event-driven investment and compliance decisions.",
+              "descriptionVi": "Ghi nhận các sự kiện quan trọng của doanh nghiệp niêm yết như hành động doanh nghiệp, công bố kết quả kinh doanh, họp cổ đông, thay đổi nhân sự và công bố pháp lý."
             },
             {
               "code": "dataset_holder_trading",
               "name": "Holder Trading",
-              "description": "Transactions made by insiders and large shareholders in Vietnam's stock market.",
-              "descriptionVi": ""
+              "description": "The Holder Trading dataset tracks transactions made by insiders and large shareholders in Vietnam’s stock market. It includes buying, selling, and registration of holdings by company executives, board members, and significant investors, offering valuable signals for governance and investment analysis.",
+              "descriptionVi": "Theo dõi các giao dịch mua bán của lãnh đạo, cổ đông lớn và người nội bộ, cung cấp tín hiệu quan trọng cho phân tích quản trị doanh nghiệp và đầu tư."
             },
             {
               "code": "dataset_historical_price",
               "name": "Historical Price",
-              "description": "Daily trading data for all stocks listed on HOSE, HNX, and UPCoM (adjusted and unadjusted).",
-              "descriptionVi": ""
+              "description": "The Historical Price dataset provides daily trading data for all stocks listed on HOSE, HNX, and UPCoM. It includes adjusted and unadjusted prices, volume, and market metrics, enabling accurate backtesting, trend analysis, and valuation modeling.",
+              "descriptionVi": "Dữ liệu giao dịch hàng ngày (đã điều chỉnh và chưa điều chỉnh) của toàn bộ cổ phiếu trên HOSE, HNX và UPCoM, phục vụ backtesting, phân tích xu hướng và định giá."
             },
             {
               "code": "dataset_historical_dividends",
               "name": "Historical Dividends",
-              "description": "All cash and stock dividend events declared by companies on HOSE, HNX, and UPCoM.",
-              "descriptionVi": ""
+              "description": "The Historical Dividends dataset tracks all cash and stock dividend events declared by companies listed on HOSE, HNX, and UPCoM. It provides key dates and amounts to support yield analysis, investment decisions, and portfolio management.",
+              "descriptionVi": "Ghi nhận toàn bộ các sự kiện chia cổ tức tiền mặt và cổ phiếu, kèm ngày và giá trị, hỗ trợ phân tích lợi suất và quản lý danh mục."
             },
             {
               "code": "Narrative Index",
               "name": "Narrative Index",
-              "description": "How news-derived topics affect stock price movements, updated monthly.",
-              "descriptionVi": ""
+              "description": "The Narrative Index tracks how news-derived topics affect stock price movements, updated on a monthly basis. Each topic captures a specific market narrative such as industry, policy and its weight reflects both prevalence and impact. By monitoring these signals over time, the index highlights which narratives consistently drive prices and which fade quickly, providing a dynamic lens into how information flows shape market behavior.",
+              "descriptionVi": "Theo dõi tác động của các chủ đề tin tức tới biến động giá cổ phiếu theo tháng, phản ánh mức độ lan tỏa và ảnh hưởng của từng \"câu chuyện thị trường\"."
             },
             {
               "code": "FGI",
               "name": "FGI Index",
-              "description": "Calculated Fear and Greed Index (FGI) for the Vietnamese stock market, based on the VN30 index.",
-              "descriptionVi": ""
+              "description": "This CSV file contains the calculated data for the Fear & Greed Index (FGI) of the Vietnamese stock market (based on the VN30 index). The FGI is constructed from multiple technical and sentiment indicators to reflect the overall state of investors: Fear or Greed.",
+              "descriptionVi": "Bộ dữ liệu chỉ số Fear & Greed của thị trường chứng khoán Việt Nam (dựa trên VN30), tổng hợp từ nhiều chỉ báo kỹ thuật và tâm lý nhà đầu tư."
             },
             {
               "code": "volatility_index_dataset",
-              "name": "Volatility Index",
-              "description": "Market volatility index for the Vietnamese stock market.",
-              "descriptionVi": ""
+              "name": "VOLATILITY INDEX",
+              "description": "The Volatility Index (VI) dataset is constructed to support volatility forecasting models for individual stocks in the Vietnamese stock market. The data focuses on describing the realized variance (RV) of each stock on a daily basis, along with extended features such as lag sequences, exponential moving averages (EMA), and the MIDAS variable. The primary objective is to capture the dynamic structure of short- and medium-term volatility, providing a foundation for models such as HAR, MIDAS, and various ensemble or stacking frameworks.",
+              "descriptionVi": "Dữ liệu phục vụ mô hình dự báo biến động giá cổ phiếu, tập trung vào phương sai thực tế theo ngày cùng các đặc trưng mở rộng như EMA, độ trễ và biến MIDAS."
             }
           ]
         },
         {
           "id": 8,
           "name": "Company Fundamentals",
-          "description": "Vietnam Fundamentals delivers clean, comparable, and fully reconciled firm-level accounting data for every company listed on HOSE, HNX, and UPCoM, covering all sectors from 2000 onward.",
-          "descriptionVi": "",
+          "description": "Vietnam Fundamentals delivers clean, comparable, and fully reconciled firm-level accounting data for every company listed on HOSE, HNX, and UPCoM. Covering all sectors from 2000 onward, this dataset is designed for empirical finance, accounting research, and investment strategy development in Vietnam’s public equity market.",
+          "descriptionVi": "Cung cấp dữ liệu kế toán doanh nghiệp niêm yết từ năm 2000 đến nay, đã được chuẩn hóa và đối soát, phục vụ nghiên cứu tài chính, kế toán và chiến lược đầu tư.",
           "datasetCount": 2,
           "datasets": [
             {
               "code": "fundamental_annual",
               "name": "Fundamental Annual",
-              "description": "Year-end income statements, balance sheets, and cash flow statements for HOSE, HNX, and UPCoM.",
-              "descriptionVi": ""
+              "description": "The Fundamentals Annual dataset provides year-end income statements, balance sheets, and cash flow statements for companies listed on HOSE, HNX, and UPCoM. It enables consistent financial analysis, valuation, and peer benchmarking across sectors and years.",
+              "descriptionVi": "Dữ liệu tài chính theo năm của doanh nghiệp niêm yết trên HOSE, HNX và UPCoM."
             },
             {
               "code": "fundamental_quaterly",
               "name": "Fundamental Quarterly",
-              "description": "Quarterly income statements, balance sheets, and cash flow statements for HOSE, HNX, and UPCoM.",
-              "descriptionVi": ""
+              "description": "The Fundamental Quarterly dataset provides quarterly income statements, balance sheets, and cash flow statements for companies listed on HOSE, HNX, and UPCoM. It enables timely and consistent financial analysis, valuation, and peer benchmarking across sectors and quarters throughout the year.",
+              "descriptionVi": "Cung cấp báo cáo kết quả kinh doanh, bảng cân đối kế toán và lưu chuyển tiền tệ theo quý."
             }
           ]
         },
         {
           "id": 10,
           "name": "Mutual Fund",
-          "description": "Comprehensive information about mutual funds in Vietnam, including fund identification, classification, NAV performance, and detailed asset allocation.",
-          "descriptionVi": "",
+          "description": "Mutual Fund dataset provides comprehensive information about mutual funds in Vietnam, including fund identification, classification, net asset value (NAV) performance, and detailed asset allocation. It supports investment research, portfolio analysis, and fund manager evaluation.",
+          "descriptionVi": "Thông tin toàn diện về các quỹ đầu tư tại Việt Nam, bao gồm nhận diện quỹ, phân loại, hiệu quả NAV và cơ cấu phân bổ tài sản.",
           "datasetCount": 5,
           "datasets": [
             {
               "code": "fund_information",
               "name": "Fund Information",
-              "description": "Fund identification and classification.",
-              "descriptionVi": ""
+              "description": "The Fund Information contains standardized, structured information on mutual funds in Vietnam, including fund identity, classifications and performance metrics.",
+              "descriptionVi": "Bộ dữ liệu Thông tin Quỹ chứa các thông tin đã được chuẩn hóa và cấu trúc về các quỹ đầu tư tại Việt Nam, bao gồm nhận diện quỹ, phân loại quỹ và các chỉ số đo lường hiệu quả hoạt động."
             },
             {
               "code": "nav_report",
-              "name": "NAV Report",
-              "description": "Net asset value (NAV) performance over time.",
-              "descriptionVi": ""
+              "name": "NAV REPORT",
+              "description": "The NAV Report dataset provides a historical record of the Net Asset Value (NAV) per unit for various Vietnamese mutual funds over time.",
+              "descriptionVi": "Bộ dữ liệu Báo cáo NAV của các quỹ đầu tư cung cấp dữ liệu giá trị tài sản ròng trên mỗi đơn vị quỹ theo ngày, hỗ trợ theo dõi hiệu quả hoạt động và phân tích tài chính theo thời gian."
             },
             {
               "code": "top_holding_list",
               "name": "Top Holding List",
-              "description": "Largest holdings per fund.",
-              "descriptionVi": ""
+              "description": "The Top Holding List captures the detailed industry-level holdings of mutual funds, with each entry representing a specific security held by a fund.",
+              "descriptionVi": "Bộ dữ liệu Danh sách Nắm giữ Hàng đầu ghi nhận chi tiết danh mục nắm giữ của các quỹ đầu tư theo từng ngành, trong đó mỗi bản ghi đại diện cho một chứng khoán cụ thể được quỹ nắm giữ."
             },
             {
               "code": "industry_holding_list",
               "name": "Industry Holding List",
-              "description": "Fund holdings broken down by industry.",
-              "descriptionVi": ""
+              "description": "The Industry Holding List provides a summary of mutual fund asset allocations by industry.",
+              "descriptionVi": "Bộ dữ liệu Danh sách nắm giữ theo Ngành cung cấp bản tổng hợp về cơ cấu phân bổ tài sản của các quỹ đầu tư theo từng ngành."
             },
             {
               "code": "asset_holding_list",
               "name": "Asset Holding List",
-              "description": "Detailed asset allocation per fund.",
-              "descriptionVi": ""
+              "description": "The Asset Holding List provides the distribution of a mutual fund’s assets by asset type.",
+              "descriptionVi": "Bộ dữ liệu Danh sách nắm giữ theo Loại Tài sản cung cấp thông tin về cơ cấu phân bổ tài sản của quỹ đầu tư theo từng loại tài sản."
             }
           ]
         }
@@ -220,15 +220,15 @@
         {
           "id": 4,
           "name": "News",
-          "description": "The News data product delivers curated, tagged, and structured news content from reputable Vietnamese sources, enabling users to track business, economic, and regulatory events.",
-          "descriptionVi": "",
+          "description": "The News data product delivers curated, tagged, and structured news content from reputable Vietnamese sources. It enables users to track business, economic, and regulatory events that affect markets and enterprises.",
+          "descriptionVi": "Cung cấp nội dung tin tức đã được chọn lọc, gắn nhãn và cấu trúc hóa từ các nguồn báo chí uy tín trong nước, hỗ trợ theo dõi diễn biến kinh tế, doanh nghiệp và chính sách.",
           "datasetCount": 1,
           "datasets": [
             {
               "code": "dataset_news",
               "name": "News",
-              "description": "Curated, tagged, structured news content from reputable Vietnamese sources.",
-              "descriptionVi": ""
+              "description": "The News dataset aggregates and structures Vietnamese-language news articles from trusted national and local media outlets. It enables timely tracking of economic trends, corporate activity, and government developments relevant to business and investment.",
+              "descriptionVi": "Bộ dữ liệu Tin tức tổng hợp và cấu trúc hóa các bài báo tiếng Việt từ các cơ quan truyền thông trung ương và địa phương uy tín. Bộ dữ liệu cho phép theo dõi kịp thời các xu hướng kinh tế, hoạt động doanh nghiệp và diễn biến chính sách của Chính phủ liên quan đến hoạt động kinh doanh và đầu tư."
             }
           ]
         }
@@ -240,21 +240,21 @@
         {
           "id": 9,
           "name": "Bank",
-          "description": "The Bank data product provides verified, up-to-date information on all licensed banks operating in Vietnam, including legal identity, branch networks, shareholder structure, and regulatory status.",
-          "descriptionVi": "",
+          "description": "The Bank data product provides verified, up-to-date information on all licensed banks operating in Vietnam. It offers a structured view of the banking sector, including legal identity, branch networks, shareholder structure, and regulatory status-supporting compliance, risk analysis, and market insights.",
+          "descriptionVi": "Thông tin đầy đủ, được xác thực về các ngân hàng hoạt động tại Việt Nam, bao gồm pháp lý, mạng lưới chi nhánh, cơ cấu cổ đông và tình trạng quản lý.",
           "datasetCount": 2,
           "datasets": [
             {
               "code": "bank_fundamentals_quarterly",
               "name": "Bank Fundamentals Quarterly",
-              "description": "Quarterly fundamentals for licensed Vietnamese banks.",
-              "descriptionVi": ""
+              "description": "The Bank Fundamentals Quarterly dataset provides detailed and standardized quarterly financial statements for Vietnamese commercial banks.",
+              "descriptionVi": "Cung cấp báo cáo tài chính chuẩn hóa của các ngân hàng thương mại Việt Nam theo quý và theo năm."
             },
             {
               "code": "bank_fundamentals_annual",
               "name": "Bank Fundamentals Annual",
-              "description": "Annual fundamentals for licensed Vietnamese banks.",
-              "descriptionVi": ""
+              "description": "The Bank Fundamentals Annual dataset offers detailed, comparable year-end financials for Vietnamese commercial banks.",
+              "descriptionVi": "Cung cấp báo cáo tài chính chuẩn hóa của các ngân hàng thương mại Việt Nam theo năm."
             }
           ]
         }
