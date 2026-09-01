@@ -1,7 +1,7 @@
 # DataCore catalog snapshot
 
 Source: https://gateway.datacore.vn/data/group
-Generated: 2026-08-01 11:22 ICT
+Generated: 2026-09-01 13:06 ICT
 
 6 domains, 8 products, 25 datasets.
 
@@ -9,7 +9,7 @@ Generated: 2026-08-01 11:22 ICT
 
 ### MacroEconomics (2 datasets)
 - Gross Domestic Product `gross_domestic_product_dataset_ds`
-- Inflation `inflation_dataset`
+- Inflation `inflation_dataset_ds`
 
 ## Location
 

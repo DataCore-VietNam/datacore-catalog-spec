@@ -1,7 +1,7 @@
 {
   "source": "https://gateway.datacore.vn/data/group",
-  "generatedAtUtc": "2026-08-01T04:22:20Z",
-  "generatedAtIct": "2026-08-01 11:22 ICT",
+  "generatedAtUtc": "2026-09-01T06:06:22Z",
+  "generatedAtIct": "2026-09-01 13:06 ICT",
   "domainTypes": [
     "ECONOMY",
     "LOCATION",
@@ -26,14 +26,14 @@
             {
               "code": "gross_domestic_product_dataset_ds",
               "name": "Gross Domestic Product",
-              "description": "This dataset provides country-level GDP data over time, covering both current and constant price measures, along with per-capita and growth indicators. It supports macroeconomic analysis, cross-country comparisons, and long-term economic trend studies.",
-              "descriptionVi": "Bộ dữ liệu này cung cấp số liệu GDP theo từng quốc gia qua các giai đoạn thời gian, bao gồm cả giá hiện hành và giá cố định, cùng với các chỉ số GDP bình quân đầu người và tốc độ tăng trưởng. Dữ liệu này hỗ trợ phân tích kinh tế vĩ mô, so sánh giữa các quốc gia và nghiên cứu xu hướng kinh tế dài hạn."
+              "description": "This dataset provides global GDP data over time, covering both current and constant price measures, along with per-capita and growth indicators. It supports macroeconomic analysis, global economic comparisons, and long-term studies of economic trends and development.",
+              "descriptionVi": "Bộ dữ liệu này cung cấp thông tin GDP toàn cầu theo thời gian, bao gồm cả số liệu theo giá hiện hành và giá cố định, cùng các chỉ số bình quân đầu người và tốc độ tăng trưởng. Dữ liệu hỗ trợ công tác phân tích kinh tế vĩ mô, so sánh kinh tế toàn cầu cũng như các nghiên cứu dài hạn về xu hướng và sự phát triển kinh tế."
             },
             {
-              "code": "inflation_dataset",
+              "code": "inflation_dataset_ds",
               "name": "Inflation",
-              "description": "This dataset provides country-level Consumer Price Index (CPI) data, including inflation rates and average price index levels over time. It supports inflation monitoring, cost-of-living analysis, and macroeconomic research.",
-              "descriptionVi": "Bộ dữ liệu này cung cấp dữ liệu Chỉ số Giá Tiêu dùng (CPI) ở cấp độ quốc gia, bao gồm tỷ lệ lạm phát và mức chỉ số giá trung bình theo thời gian. Bộ dữ liệu này hỗ trợ việc theo dõi lạm phát, phân tích chi phí sinh hoạt và nghiên cứu kinh tế vĩ mô."
+              "description": "This dataset provides global Consumer Price Index (CPI) data over time, including inflation rates and average price index levels. It supports global inflation monitoring, cost-of-living analysis, cross-country comparisons, and macroeconomic research.",
+              "descriptionVi": "Bộ dữ liệu này cung cấp thông tin Chỉ số Giá tiêu dùng (CPI) toàn cầu theo thời gian, bao gồm tỷ lệ lạm phát và mức chỉ số giá trung bình. Dữ liệu hỗ trợ việc theo dõi lạm phát toàn cầu, phân tích chi phí sinh hoạt, so sánh giữa các quốc gia và nghiên cứu kinh tế vĩ mô."
             }
           ]
         }
