@@ -1,7 +1,7 @@
 # DataCore catalog snapshot
 
 Source: https://gateway.datacore.vn/data/group
-Generated: 2026-10-01 13:58 ICT
+Generated: 2026-11-01 14:12 ICT
 
 6 domains, 8 products, 25 datasets.
 
